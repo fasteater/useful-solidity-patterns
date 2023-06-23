@@ -35,7 +35,7 @@ So, in this case, using transfer hooks is one less transaction for the user 😎
 function onERC721Received(address operator, address from, uint256 tokenId, bytes data) external returns(bytes4);
 ```
 
-- This function called on the recipient of the token.
+- This function is called on the recipient of the token.
 - This call is made *after* the token is transferred.
 - `operator` is the address that called `safeTransferFrom()`, which in this pattern will always be `tx.origin` (owner).
 - `from` is the original owner of the token, which in this pattern will also be `tx.origin`.
